@@ -1,0 +1,6 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    background: linear-gradient(#999, #333);
+}
