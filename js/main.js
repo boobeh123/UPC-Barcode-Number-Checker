@@ -1,3 +1,5 @@
+document.querySelector('button').addEventListener('click', getFetch);       // Listens for click on button
+
 // Function requires user to enter barcode number and click button to submit
 function getFetch(userInput) {
 // choice will store the actual twelve digit number 
