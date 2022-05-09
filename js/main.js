@@ -1,11 +1,12 @@
-// Will be able to use template literal to search up any UPC barcode number -> https://world.openfoodfacts.org/api/v0/product/${UPCNumber}.json
-// URL is currently hardcoded to interact with openfoodfact's API
-const FOOD_URL = 'https://world.openfoodfacts.org/api/v0/product/737628064502.json';
+// Function requires user to enter barcode number and click button to submit
+function getFetch(userInput) {
+// choice will store the actual twelve digit number 
+const choice = userInput;
+// the twelve digit number will be pasted where the template literal ${} sits
+const UPC_Number = `https://world.openfoodfacts.org/api/v0/product/${choice}.json`;
 
-fetch(FOOD_URL)                                                             // Fetches 12-Digit UPC Barcode number 737628064502
-    .then(response => {
-        return response.json();
-    })
+fetch(UPC_Number)                                                           // Fetches 12-Digit UPC Barcode number 737628064502
+    .then(response => response.json())
     .then(data => {
         console.log(data);                                                  // Returns Object with product property
         console.log(data.product);                                          // Accessing the product property
@@ -16,3 +17,7 @@ fetch(FOOD_URL)                                                             // F
         console.log(`Ingredients: ` + data.product.ingredients_text);       
         console.log(`Image URL: ` + data.product.image_url);                // Returns the image of the product
     })
+    .catch(err => {
+        console.log(`error: ${err}`);                                       // Error handling
+    })
+}
