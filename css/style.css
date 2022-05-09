@@ -3,4 +3,5 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     background: linear-gradient(#999, #333);
+    height: 100vh
 }
