@@ -5,3 +5,19 @@ html {
     background: linear-gradient(#999, #333);
     height: 100vh
 }
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+table,
+th {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: gold;
+}
