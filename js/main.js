@@ -32,6 +32,8 @@ fetch(UPC_Number)                                                           // F
             const UPC_product = new ProductInfo(data.product)
             // Displays name, image, and nutrition using one method vs many functions
             UPC_product.displayUPC_Product();
+            // Creates table elements and displays ingredients
+            UPC_product.displayUPC_Ingredients();
 
         // If object with status property is equal to 0, alert user to check their UPC code
         } else if (data.status === 0) {
@@ -58,5 +60,19 @@ class ProductInfo {
         document.querySelector('#product-name').innerText = this.name
         document.querySelector('#product-image').src = this.image
         document.querySelector('#product-nutrition').src = this.nutrition
+    }
+
+    // Method to add <tr> & <td> tags, then inserts text into <td> tags
+    displayUPC_Ingredients() {
+        for (let key in this.ingredients) {
+        let tableRef = document.querySelector('#product-ingredient')
+        // Inserts <tr> tags on <table>
+        let newRow = tableRef.insertRow(-1)
+        // Inserts <td> tags on <tr> at index 0
+        let newCell = newRow.insertCell(0)
+        // Inserts ingredients into individual cells
+        let newText = document.createTextNode(this.ingredients[key].text)
+        newCell.appendChild(newText)
+        }  
     }
 }
