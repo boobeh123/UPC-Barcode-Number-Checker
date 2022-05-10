@@ -18,6 +18,12 @@ fetch(UPC_Number)                                                           // F
         console.log(`Type of food: ` + data.product.generic_name);          
         console.log(`Ingredients: ` + data.product.ingredients_text);       
         console.log(`Image URL: ` + data.product.image_url);                // Returns the image of the product
+
+        // Displays product name on page
+        document.querySelector('#product-name').innerText = `Product name: ${data.product.product_name}`
+        // Displays product image on page
+        document.querySelector('#product-image').src = data.product.image_url
+
     })
     .catch(err => {
         console.log(`error: ${err}`);                                       // Error handling
