@@ -13,6 +13,7 @@ html {
 
 table,
 th {
+    font-size: 1.25rem;
     border: 1px solid #333;
     background-color: #fff;
 }
@@ -49,4 +50,16 @@ header {
     padding: 0.5rem;
     max-width: 90rem;
     max-height: 70rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer > section .fa-github:hover{
+    color: black;
+}
+footer > section .fa-twitter:hover{
+    color: dodgerblue;
 }
