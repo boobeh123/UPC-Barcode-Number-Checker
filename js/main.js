@@ -1,9 +1,9 @@
 document.querySelector('button').addEventListener('click', getFetch);       // Listens for click on button
 
 // Function requires user to enter barcode number and click button to submit
-function getFetch(userInput) {
-// choice will store the actual twelve digit number 
-const choice = userInput;
+function getFetch() {
+// choice will grab the UPC number from the input field
+const choice = document.querySelector('#barcode').value;
 // the twelve digit number will be pasted where the template literal ${} sits
 const UPC_Number = `https://world.openfoodfacts.org/api/v0/product/${choice}.json`;
 
