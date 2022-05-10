@@ -14,12 +14,12 @@ html {
 table,
 th {
     border: 1px solid #333;
+    background-color: #fff;
 }
 
 thead,
 tfoot {
     background-color: #333;
-    color: gold;
 }
 
 header {
@@ -30,7 +30,7 @@ header {
 .container {
     /* border: 8px solid red; */
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
 .container > section {
