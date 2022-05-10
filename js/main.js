@@ -23,6 +23,7 @@ fetch(UPC_Number)                                                           // F
         document.querySelector('#product-name').innerText = `Product name: ${data.product.product_name}`
         // Displays product image on page
         document.querySelector('#product-image').src = data.product.image_url
+        document.querySelector('#product-nutrition').src = data.product.image_nutrition_url
 
     })
     .catch(err => {
