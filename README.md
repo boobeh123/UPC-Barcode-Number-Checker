@@ -4,7 +4,7 @@
 Anyone can enter a UPC barcode number on this web application. It will return that product, displaying its name, nurtrional values, and ingredients if provided.
 
 ## Demo
-!Coming soon..
+![Demo](demo3.gif)
 
 ## Features
 * Accepts valid UPC barcode numbers and returns information about that product
