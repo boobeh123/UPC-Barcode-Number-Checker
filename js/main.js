@@ -66,18 +66,14 @@ class ProductInfo {
     // Then method adds <tr> & <td> tags, and inserts text into <td> tags
     displayUPC_Ingredients() {
         let tableRef = document.querySelector('#product-ingredient')        // Inserts <tr> tags on <table>
-        for (let i = 1; i < tableRef.rows.length;) {                         // Iterate through table starting at the first index,
+        for (let i = 1; i < tableRef.rows.length;) {                        // Iterate through table starting at the first index,
             tableRef.deleteRow(i);                                          // Then delete rows at index 1. No need to increment iterations (Index 3 becomes index 2 on removal, index 2 becomes index 1)
         }
-
         for (let key in this.ingredients) {                                 // Iterate through properties in ingredient list
         let newRow = tableRef.insertRow(-1)                                 // Inserts a new row on a given table
         let newCell = newRow.insertCell(0)                                  // Inserts a new cell on a given row
         let newText = document.createTextNode(this.ingredients[key].text)   // Creates a new text node
         newCell.appendChild(newText)                                        // Inserts text (ingredient) into cell
-        if (this.ingredients[key].vegetarian == null ? 'unknown' : this.ingredients[key].vegetarian) {
-            newCell.classList.add('non-veg-item')
-        }
         }  
     }
 }
