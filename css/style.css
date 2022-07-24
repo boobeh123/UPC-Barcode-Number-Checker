@@ -1,60 +1,233 @@
-html {
-    font-family: 'Roboto', sans-serif;
-    font-size: 62.5%;
-    box-sizing: border-box;
-    background: linear-gradient(#999, #333);
-    height: 175vh
-}
-*, *::before, *::after {
+/**************************************************************
+* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+* License: none (public domain)
+***************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+/**************************************************************
+* HTML5 display-role reset for older browsers
+***************************************************************/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/**************************************************************
+* Custom styles
+***************************************************************/
+*, 
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    background: -webkit-linear-gradient(#648880, #293f50);
+    background: -moz-linear-gradient(#648880, #293f50);
+    background: linear-gradient(to top left,#648880, #293f50);
+    color: #fefefe;
+    text-shadow: 1px 1px 2px rgba(0,0,0, .5);
+    font-family: 'Roboto', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    line-height: 22px;
+    height: 100vh;
+    /* border: 2px solid red; */
+} 
 
 table, th, td {
-    font-size: 1.25rem;
-    border: 1px solid #333;
-    background-color: #fff;
-    margin: 0 auto 0 auto;
+    border: 1px solid #293f50;
+    background-color: #648880;
+    font-size: 1rem;
+    color: #fefefe;
+    margin: 0 auto;
 }
+
+/**************************************************************
+* Header
+***************************************************************/
 
 header {
+    /* border: 2px solid red; */
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
+    padding: 0.5rem 0;
 }
+
+/**************************************************************
+* Section
+***************************************************************/
 
 .container {
-    /* border: 8px solid red; */
-    display: flex;
-    flex-direction: column-reverse;
+    /* border: 2px solid gold; */
+    text-align: center;
 }
 
-.container > section {
-    /* border: 4px solid gold; */
+.container input {
+    height: 1.35rem;
+}
+
+.container button {
+    display: inline-block;
+    width: 5%;
+    width: 7.5rem;
+    height: 1.275rem;
+    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.container section + section h2 {
+    /* border: 2px solid firebrick; */
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.75rem;
+    padding: 0.5rem 0;
+}
+
+/* .container > section {
+    border: 4px solid gold;
     align-self: center;
     padding: 1rem;
-}
+} */
 
-.container > section > h2 {
-    /* border: 2px solid fuchsia; */
+/* .container > section > h2 {
+    border: 2px solid fuchsia;
     padding: 0.5rem;
-}
+} */
 
-.container > section > img {
-    /* border: 2px dashed red; */
+/* .container > section > img {
+    border: 2px dashed red;/
     padding: 0.5rem;
     max-width: 90rem;
     max-height: 70rem;
-}
+} */
+
+/**************************************************************
+* Footer
+***************************************************************/
 
 footer {
     display: flex;
     justify-content: center;
 }
 
-footer > section .fa-github:hover{
+footer a {
+    margin: 0 0.5rem;
+}
+
+footer a:visited {
+    color: orange;
+}
+footer a:hover {
     color: black;
 }
-footer > section .fa-twitter:hover{
+footer a:hover:nth-child(+2) {
     color: dodgerblue;
+}
+
+/**************************************************************
+* Mobile
+***************************************************************/
+
+@media screen and (max-device-width: 1440px) {
+
+    /* body {
+        border: 2px solid green;
+    }  */
+
+    .product-image {
+        max-width: 95;
+    }
+
+    .product-nutrition {
+        max-width: 95vw;
+    }
+
+}
+
+@media screen and (max-device-width: 768px) {
+
+    /* body {
+        border: 2px solid salmon;
+    }  */
+
+    .product-image {
+        max-width: 95;
+    }
+
+    .product-nutrition {
+        max-width: 95vw;
+    }
+
+}
+
+@media screen and (max-device-width: 565px) {
+
+    /* body {
+        border: 2px solid gold;
+    }  */
+
+    .product-image {
+        max-width: 95;
+    }
+
+    .product-nutrition {
+        max-width: 95vw;
+    }
+
+}
+
+@media screen and (max-device-width: 345px) {
+
+    /* body {
+        border: 2px solid red;
+    }  */
+
+    .product-image {
+        max-width: 95;
+    }
+
+    .product-nutrition {
+        max-width: 95vw;
+    }
+
 }
