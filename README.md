@@ -1,7 +1,5 @@
-[UPC-Barcode-Number-Checker](https://boobeh123.github.io/UPC-Barcode-Number-Checker/)
-
 ## Description
-Anyone can enter a UPC barcode number on this web application. It will return that product, displaying its name, nurtrional values, and ingredients if provided.
+A web application that accepts a UPC barcode number and returns data about the product. The data includes its name, nurtrional values, and ingredients.
 
 ## Demo
 ![Demo](demo3.gif)
@@ -12,14 +10,8 @@ Anyone can enter a UPC barcode number on this web application. It will return th
 * Invalid barcode numbers alert the user if product doesn't exist
 
 ## Technologies
-![HTML](https://img.shields.io/badge/-HTML-important?logo=html5)![CSS](https://img.shields.io/badge/-CSS-salmon?logo=css3)![JavaScript](https://img.shields.io/badge/-JAVASCRIPT-333?logo=javascript)![Git](https://img.shields.io/badge/-GIT-orange?logo=git)
-
-### What did you learn?
-* HTML: Table, tr, td tags
-* JavaScript: Using a Class & constructor
-* Git: Version control of a project start to finish
+<img src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /><img src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /><img src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="40" />
 
 ## Optimizations
-My initial commit was a Minimum-Viable-Project, I used many functions to display information on the page. 
-Using a class allowed me to clump many of those functions into a method.
-There are a lot of properties that this object returns and I can expand the project to have more information available.
+* Add a "generate UPC number" button.
+* Add more data from API to web page.
