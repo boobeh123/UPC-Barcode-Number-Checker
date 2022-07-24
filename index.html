@@ -15,29 +15,22 @@
     <title>UPC Barcode Number Checker</title>
 </head>
 <body>
-
     <header>
         <h1>UPC Barcode Number Checker</h1>
-        <h2>Barcodes to try: <br>5000328261539 <br> 041196910759 <br> 031146058105</h2>
+        <!-- <h2>Barcodes to try: <br>5000328261539 <br> 041196910759 <br> 031146058105</h2> -->
     </header>
-
-    <section class="container">
-
+    <div class="container">
         <section>
             <!-- user Input -->
             <label for="barcode">Enter #</label>
-            <input type="number" name="barcode" placeholder="031146058105" id="barcode">
-            <button type="button">Submit</button>
+            <input type="number" name="barcode" placeholder="5000328261539" class="barcode"><!-- 
+        --><button type="button">Submit</button>
         </section>
-
         <section>
             <!-- Display name from UPC number  -->
-            <h2 id="product-name">Product name</h2>
-            <!-- Display image from UPC number -->
-            <img src="#" id="product-image" alt="UPC-number-product-image">
-            <img src="#" id="product-nutrition" alt="UPC-number-product-nutrition-image">
+            <h2 class="product-name">Product name</h2>
             <!-- Display ingredients from UPC number -->
-            <table id="product-ingredient">
+            <table class="product-ingredient">
                 <thead>
                     <tr>
                         <th>Ingredients:</th>
@@ -48,10 +41,11 @@
                     </tr>
                 </tbody>
             </table>
+            <!-- Display image from UPC number -->
+            <img src="#" class="product-image" alt="UPC-number-product-image">
+            <img src="#" class="product-nutrition" alt="UPC-number-product-nutrition-image">
         </section>
-        
-    </section>
-
+    </div>
     <footer>
         <section>
         <a href="https://github.com/boobeh123"><i class="fab fa-github"></i></a>
