@@ -3,7 +3,7 @@ document.querySelector('button').addEventListener('click', getFetch);       // L
 // Function requires user to enter barcode number and click button to submit
 function getFetch() {
 // choice will grab the UPC number from the input field
-const choice = document.querySelector('#barcode').value;
+const choice = document.querySelector('.barcode').value;
 // the twelve digit number will be pasted where the template literal ${} sits
 const UPC_Number = `https://world.openfoodfacts.org/api/v0/product/${choice}.json`;
 
@@ -57,15 +57,15 @@ class ProductInfo {
 
     // Method to display product name and images onto page
     displayUPC_Product() {
-        document.querySelector('#product-name').innerText = this.name
-        document.querySelector('#product-image').src = this.image
-        document.querySelector('#product-nutrition').src = this.nutrition
+        document.querySelector('.product-name').innerText = this.name
+        document.querySelector('.product-image').src = this.image
+        document.querySelector('.product-nutrition').src = this.nutrition
     }
 
     // Method deletes first index/row to clear table
     // Then method adds <tr> & <td> tags, and inserts text into <td> tags
     displayUPC_Ingredients() {
-        let tableRef = document.querySelector('#product-ingredient')        // Inserts <tr> tags on <table>
+        let tableRef = document.querySelector('.product-ingredient')        // Inserts <tr> tags on <table>
         for (let i = 1; i < tableRef.rows.length;) {                        // Iterate through table starting at the first index,
             tableRef.deleteRow(i);                                          // Then delete rows at index 1. No need to increment iterations (Index 3 becomes index 2 on removal, index 2 becomes index 1)
         }
